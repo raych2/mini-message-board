@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  a(href='/') Back to Messages
+  h1 New Message
+  form(method='POST', action='/new')
+    div
+      label(for='name') Name:
+      input#name(type='text', name='name' required)
+    div
+      label(for='message') Message:
+      textarea#message(name='message', rows='5', cols='33' required)
+    div
+      input(type='submit', value='Submit')
+
